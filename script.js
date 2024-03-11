@@ -23,16 +23,7 @@ locationBtn.addEventListener("click", () =>{
     }
 });
 
-function requestApi(city){
-    api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=56008a454fa2ba3159179fc5a51e5a44&lang=ro`;
-    fetchData();
-}
 
-function onSuccess(position){
-    const {latitude, longitude} = position.coords;
-    api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=56008a454fa2ba3159179fc5a51e5a44&lang=ro`;
-    fetchData();
-}
 
 function onError(error){
     infoTxt.innerText = "Utilizatorul nu a acceptat localizarea ";
